@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles\style.css">
+</head>
+
+<body onload="onPageLoad()">
+    <section class="container">
+        <aside>
+            <h2 id="p1"></h2>
+            <h2 id="p2"></h2>
+            <input type="reset" value="Restart" onclick="restart()">
+        </aside>
+        <main id="main">
+        </main>
+    </section>
+    <section id="player-info" class="player-info">
+        <form onsubmit="return false">
+            <div class="player-info-content">
+                <label for="player1">1st player:</label>
+                <input type="text" name="player1" id="player1" value="Player1">
+                <label for="player2">2nd player:</label>
+                <input type="text" name="player2" id="player2" value="Player2">
+                <input type="submit" value="Go..." onclick="onSubmit()">
+            </div>
+        </form>
+    </section>
+    <script type="text/javascript" src="scripts\script.js"></script>
+</body>
+
+</html>

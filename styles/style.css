@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Grandstander', cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #b34b4b;
+    text-align: center;
+}
+
+.player-info {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: grid;
+    min-height: 100%;
+    min-width: 100%;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(121, 121, 121, 0.8);
+}
+
+.player-info-content {
+    position: sticky;
+    top: 0;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 2fr;
+}
+
+input,
+label {
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 5px 3px;
+}
+
+input[type=submit],
+input[type=reset] {
+    grid-column: 1 / -1;
+    background-color: transparent;
+    justify-self: center;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover {
+    box-shadow: 0px 0px 15px rgb(39, 38, 38);
+}
+
+.no-disp {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    background-color: #000;
+    gap: 0.5em;
+    margin: 2em;
+}
+
+aside {
+    padding: 2em;
+}
+
+aside>* {
+    margin: 1em;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        opacity: 0.0;
+    }
+}
+
+.blink {
+    animation: blink 1s step-start 0s infinite;
+    -webkit-animation: blink 1s step-start 0s infinite;
+}
+
+main>div {
+    background-color: #b34b4b;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    font-size: 5em;
+}
+
+main>div:hover {
+    box-shadow: 0px 0px 4px 2px inset;
+}
+
+@media screen and (max-width: 750px) {
+    .container {
+        flex-direction: column;
+    }
+    .player-info-content {
+        grid-template-columns: 1fr;
+    }
+}
